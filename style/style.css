@@ -774,9 +774,12 @@ footer{
     }
 
 
+
 }
 
 @media only screen and (max-width: 576px) {
+    
+    
     .about, .service, .contact{
         margin: 5rem 3rem;
     }
