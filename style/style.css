@@ -712,6 +712,11 @@ footer{
 }
 
 @media only screen and (max-width: 768px) {
+
+    .home{
+        background-position: center;
+    }
+    
     .menu{
         position: absolute;
         flex-direction: column;
