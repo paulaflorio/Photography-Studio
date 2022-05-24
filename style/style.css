@@ -343,6 +343,71 @@ nav{
 
 }
 
+/* Gallery Section */
+.gallery{
+    margin: 5rem 7rem 10rem 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.gallery-text h3{
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.gallery-text p{
+    font-size: 1.9rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+.gallery-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery-content .row-g{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.gallery-img{
+    width: 30%;
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: all .5s ease;
+
+}
+
+.gallery-img img{
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 3px 23px 0 rgba(0,0,0,0.1);
+    transition: all .5s ease;
+}
+
+.gallery-img img:hover{
+    transform: scale(1.2);
+
+}
+
+
+/* Contact section */
 .contact{
     margin: 5rem 7rem 10rem 7rem;
     display: flex;
@@ -663,7 +728,7 @@ footer{
 
 
 @media only screen and (max-width: 1024px){
-    .home-text h3, .about-text h3, .service-text h3, .contact-text h3{
+    .home-text h3, .about-text h3, .service-text h3, .contact-text h3, .gallery-text h3{
         font-size: 3rem;
     }
 
@@ -691,12 +756,50 @@ footer{
     .contact-content .form{
         width: 80%;
     }
-}
 
-@media only screen and (max-width: 864px) {
     .social{
         display: none;
     }
+
+    .menu{
+        position: absolute;
+        flex-direction: column;
+        text-align: center;
+        background-color:#fff;
+        box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,0.16);
+        transition: 0.5s ease;
+        left: 0;
+        right: 0;
+        top: -40rem;
+    }
+
+    #menu-icon{
+        display: inline-block;
+        z-index: 10000;
+    }
+
+    .gallery{
+        margin:0;
+        width: 100%;
+    }
+
+    .gallery-content{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .gallery-content .row-g{
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .gallery-img{
+        width: 90%;
+        margin-bottom: 3rem;
+    }
+}
+
+@media only screen and (max-width: 864px) {
 
     .about-text{
         margin-bottom: 1rem;
@@ -717,22 +820,6 @@ footer{
         background-position: center;
     }
     
-    .menu{
-        position: absolute;
-        flex-direction: column;
-        text-align: center;
-        background-color:#fff;
-        box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,0.16);
-        transition: 0.5s ease;
-        left: 0;
-        right: 0;
-        top: -40rem;
-    }
-
-    #menu-icon{
-        display: inline-block;
-        z-index: 10000;
-    }
 
     .home-text h3{
         width: 40rem;
@@ -783,8 +870,7 @@ footer{
 }
 
 @media only screen and (max-width: 576px) {
-    
-    
+
     .about, .service, .contact{
         margin: 5rem 3rem;
     }
@@ -803,7 +889,13 @@ footer{
         width: 100%;
     }
 
+    .gallery-content{
+        flex-direction: column;
+    }
 
+    .gallery-img{
+        width: 120%;
+    }
     .form .row{
         flex-direction: column;
         margin-bottom: 0;
@@ -821,7 +913,7 @@ footer{
 }
 
 @media only screen and (max-width: 476px){
-    .home-text p, .service-text p, .about-text p, .about-text span, .contact-text p{
+    .home-text p, .service-text p, .about-text p, .about-text span, .contact-text p, .gallery-text p{
         font-size: 1.7rem;
     }
 
@@ -829,6 +921,9 @@ footer{
         padding-left: 0;
     }
 
+    .gallery-img{
+        width: 150%;
+    }
 
 } 
 
